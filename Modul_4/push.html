@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakultas Ilmu Komputer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <div class="left-con">
+        <font size="7">Fakultas Ilmu Komputer</font><br>
+        <font size="5">Universitas Kuningan</font><br>
+        <font size="3">Alamat: Jl.Pramuka No.67, Purwawinangun, Kec.Kuningan, Kabupaten Kuningan, Jawa Barat 45512</font>
+    </div>
+    <div class="right-img">
+        <img src="images.png" alt="logo_uniku">
+    </div>
+</nav>
+<hr size="3">
+<main id="alumni">
+    <input type="text" id="alumniSearch" onkeyup="filterAlumni()" placeholder="Cari Alumni atau Jurusan..." class="search-box">
+    <div>
+        <article>
+            <h2>Profil Alumni Fakultas Ilmu Komputer</h2>
+            <div class="alumni-profiles">
+                <!-- Alumni 1 -->
+                <div class="alumni-card" data-name="Ripky Paturohman" data-program="Sistem Informasi S1">
+                    <img src="Screenshot 2024-11-25 225145.png" alt="Alumni 1" class="alumni-img">
+                    <h3>Ripky Paturohman</h3>
+                    <p>Program Studi Sistem Informasi S1</p>
+                </div>
+                <!-- Alumni 2 -->
+                <div class="alumni-card" data-name="Nasik" data-program="Teknik Informatika S1">
+                    <img src="TI.jpg" alt="Alumni 2" class="alumni-img">
+                    <h3>Nasik</h3>
+                    <p>Program Studi Teknik Informatika S1</p>
+                </div>
+                <!-- Alumni 3 -->
+                <div class="alumni-card" data-name="Mulleto" data-program="Desain Komputer Visual S1">
+                    <img src="dkv.jpg" alt="Alumni 3" class="alumni-img">
+                    <h3>Mull</h3>
+                    <p>Program Studi Desain Komputer Visual S1</p>
+                </div>
+                <!-- Add more alumni cards as needed -->
+            </div>
+        </article>
+    </div>
+</main>
+
+<script>
+    // Function to filter alumni based on search input
+    function filterAlumni() {
+        // Get the value of the search input
+        const input = document.getElementById('alumniSearch').value.toLowerCase();
+    
+        // Get all alumni cards
+        const alumniCards = document.querySelectorAll('.alumni-card');
+    
+        // Loop through each alumni card and check if the name or program matches the input
+        alumniCards.forEach(card => {
+            const name = card.getAttribute('data-name').toLowerCase(); // Get the alumni's name
+            const program = card.getAttribute('data-program').toLowerCase(); // Get the alumni's program
+    
+            // If the input matches the name or program, show the card, otherwise hide it
+            if (name.includes(input) || program.includes(input)) {
+                card.style.display = ''; // Show the card
+            } else {
+                card.style.display = 'none'; // Hide the card
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

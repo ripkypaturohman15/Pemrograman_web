@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fungsi dan scope</title>
+</head>
+<body>
+    <script>
+        function tambah(a,b){
+            return a+b;
+        }
+        function greet(nama="pengguna"){
+            console.log("hallo,"+nama+"!");
+        }
+        function outerFunction(){
+            let outerVar ="Variable luar";
+            function innerFunction(){
+                let innerVar ="Variable dalam";
+                console.log(outerVar);
+                console.log(innerVar);
+            }
+            innerFunction();
+        }
+        console.log("Hasil penjumlahan:"+tambah(5,10));
+        greet("John");
+        outerFunction();
+
+        let globalVar ="Variable global";
+        function checkScope(){
+            let localVar="Variable lokal";
+            console.log(globalVar);
+            console.log(localVar);
+        }
+        checkScope();
+        //console.log(localVar);
+        //ini akan menghasilkan eror karena localVar tidak dapat diakses
+    </script>
+</body>
+</html>
