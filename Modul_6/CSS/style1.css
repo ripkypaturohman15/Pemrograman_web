@@ -1,0 +1,32 @@
+body {
+    padding-top: 56px;
+}
+
+.jumbotron {
+    background: url('https://fkom.uniku.ac.id/') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 5rem 1rem;
+    position: relative; /* Required for overlay positioning */
+    height: 100vh; /* Ensures the jumbotron takes the full height of the viewport */
+}
+
+/* Add overlay effect */
+.jumbotron-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Darken the background */
+    padding: 2rem;
+    border-radius: 0.25rem;
+    position: absolute; /* Ensures it's positioned over the background image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Make sure text in the jumbotron stays visible */
+.jumbotron h1,
+.jumbotron p {
+    position: relative; /* Position text above overlay */
+    z-index: 2;
+}
