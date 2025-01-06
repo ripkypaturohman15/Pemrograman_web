@@ -13,15 +13,13 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <style>
-        body {
-            margin: 0; /* Menghilangkan margin default dari body */
-        }
-
         .jumbotron-bg {
-            background-image: url('https://fkom.uniku.ac.id/wp-content/uploads/2023/01/Header-Home.jpg'); /* URL gambar latar belakang */
+            background-image: url('fkom.jpg');
+            /* URL gambar latar belakang */
             background-size: cover;
             background-position: center;
-            color: white; /* Warna teks di jumbotron */
+            color: white;
+            text-shadow: 1px 1px 2px black;
         }
     </style>
 </head>
@@ -32,7 +30,7 @@
     <header class="jumbotron-bg text-white text-center py-5">
         <div class="container">
             <h1 class="display-4">Selamat Datang di Website Kami</h1>
-            <p class="lead">Selamat menikmati Halaman Ini.</p>
+            <p class="lead">Ini adalah contoh jumbotron dengan latar belakang gambar di bagian atas halaman.</p>
         </div>
     </header>
 
@@ -49,18 +47,21 @@
                     if (isset($menu)) {
                         if ($menu == "home") {
                             @include "Latihan_09_home.php";
-                        } else if($menu=="about"){
+                        } else if ($menu == "about") {
                             @include "Latihan_09_about.php";
-                        } else if($menu=="alumni"){
+                        } else if ($menu == "alumni") {
                             @include "Latihan_09_ralumni.php";
-                        }else if($menu=="calumni"){
+                        } else if ($menu == "calumni") {
                             @include "Latihan_09_calumni.php";
-                        }else if($menu=="ualumni"){
+                        } else if ($menu == "ualumni") {
                             @include "Latihan_09_ualumni.php";
+                        } else if ($menu == "bursalumni") {
+                            @include "bursa_kerja.php";
+                        } else if ($menu == "cari_alumni") {
+                            @include "cari_alumni.php";
                         }
-                        else {
-                            @include "Latihan_09_home.php";
-                        }
+                    } else {
+                        @include "Latihan_09_home.php";
                     }
                     ?>
                 </article>
