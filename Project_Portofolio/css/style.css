@@ -1,0 +1,87 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+#home {
+    background-image: url('mobile.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Menambahkan agar gambar tetap saat scroll */
+    padding: 100px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#home h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-top: 20px; /* Menambahkan margin untuk menggeser gambar ke bawah */
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+
+#portfolio {
+    background-color: #f9f9f9;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.form-control {
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+ /* Zoom effect on hover */
+ .zoom-effect {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50%; /* Ensures the image stays round */
+}
+
+.zoom-effect:hover {
+    transform: scale(1.2); /* Adjust the value to control zoom level */
+}

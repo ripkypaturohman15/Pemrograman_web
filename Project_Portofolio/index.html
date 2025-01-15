@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portofolio Pribadi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Ripky Paturohman</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Tentang Saya</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portofolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Beranda -->
+<section id="home" class="text-center">
+    <div class="container">
+        <!-- Gambar Profil -->
+        <h1>"Welcome to My Portfolio"</h1>
+        <p class="lead">I am Ripky Paturohman</p>
+    </div>
+</section>
+
+<!-- Tentang Saya -->
+<section id="about" class="py-5">
+<!-- Image with zoom effect on hover -->
+<div class="text-center">
+    <img src="Gambar/profile.jpg" alt="Profile Image" class="img-fluid zoom-effect" style="width: 400px; height: 400px; object-fit: cover; border-radius: 0;">
+</div>
+    <br>
+    <br>
+    <div class="container">
+        <h2 class="text-center mb-4">About Me</h2>
+        <p>I am Ripky Paturohman, a student at Universitas Kuningan, currently pursuing a degree in Information Systems. In addition to focusing on education in the field of information technology, I also possess skills in graphic design and programming.</p>
+    </div>
+</section>
+
+<!-- Portofolio -->
+<section id="portfolio" class="py-5">
+    <div class="container">
+        <h2>Portofolio Karya</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <img src="Gambar/Sertif Dicoding Web.jpg" class="card-img-top" alt="Proyek 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyek Web Dicoding</h5>
+                        <p class="card-text">Projek ini menandakan bahwa saya Ripky paturohman lulus dalam projek pembelajaran Web online Dicoding</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <img src="Gambar/Screenshot 2025-01-12 210926.png" class="card-img-top" alt="Proyek 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyek Design UI/UX Aplikasi</h5>
+                        <p class="card-text">Projek Ini Membuat Sebuah Aplikasi Tentang Panduan Ibu Hamil yang Dikerjakan Bersama Tim saya dan diri saya Sendiri.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <img src="Gambar/Screenshot 2025-01-15 172154.png" class="card-img-top" alt="Proyek 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyek Pendeteksi Api IOT </h5>
+                        <p class="card-text">Proyek ini adalah pembuatan Pendeteksi api berbasis IoT dan WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Social Media Links -->
+<section id="social-media" class="py-5">
+    <div class="container text-center">
+        <h3>Follow Me on Social Media</h3>
+        <div class="mt-4">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/younhkyy_" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon" style="width: 40px; margin: 0 10px;">
+            </a>
+           <!-- TikTok -->
+            <a href="https://www.tiktok.com/@younhkyy_" target="_blank">
+                <img src="Gambar/tiktok.png" alt="TikTok" class="social-icon" style="width: 40px; margin: 0 10px;">
+            </a>
+            <!-- Telegram -->
+            <a href="http://t.me/Kipaklu" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="social-icon" style="width: 40px; margin: 0 10px;">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Kontak -->
+<section id="contact" class="py-5" style="background-color: #f1f1f1;">
+    <div class="container">
+        <h2 class="text-center mb-4">Kontak</h2>
+        <form action="php/send_email.php" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Pesan</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <p>&copy; 2025 Ripky Paturohman. All Rights Reserved.</p>
+    <p>
+        <a href="https://linkedin.com">LinkedIn</a> | 
+        <a href="https://github.com/ripkypaturohman15">GitHub</a>
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
